@@ -57,7 +57,7 @@ export default class Search extends Component {
     keyboardAppearance: PropTypes.string,
     fontFamily: PropTypes.string,
     allDataOnEmptySearch: PropTypes.bool,
-    editable: PropTypes.bool
+    editable: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -249,7 +249,8 @@ export default class Search extends Component {
       closeButtonAccessibilityLabel,
       backCloseSize,
       fontSize,
-      editable
+      editable,
+      editable,
     } = this.props;
     return (
       <Animated.View
@@ -367,7 +368,8 @@ const styles = StyleSheet.create({
     shadowRadius: 5
   },
   navWrapper: {
-    width: Dimensions.get('window').width
+    // width: Dimensions.get('window').width,
+    flex: 1,
   },
   nav: {
     ...Platform.select({
